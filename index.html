@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background">
+        <div class="overlay"></div>
+        <div class="heart-confetti">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="flying-heart"><img src="flying-heart.png" alt="Flying Heart"></div>
+        <div class="container">
+            <header>
+                <h1>Our Love Gallery</h1>
+            </header>
+            <div class="gallery">
+                <!-- Add 15 images with captions below -->
+                <div class="image-card" onclick="openModal(this, 'Chúc mừng năm mới với nhiều bước tiến mới yeahhh!!!')">
+                    <img src="photos/photo1.jpg" alt="Photo 1">
+                    <p class="caption">Chúc mừng năm mới với nhiều bước tiến mới yeahhh!!!</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Sinh nhật cô gái xinh đẹp nào đó trong tấm hình ó')">
+                    <img src="photos/photo2.jpg" alt="Photo 2">
+                    <p class="caption">Sinh nhật cô gái xinh đẹp nào đó trong tấm hình ó</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Chúc bé gấu sẽ đậu vô NV1 với nhiều trải nghiệm mới trên con đường mình đã chọn. Đừng quên tớ là được hehehe')">
+                    <img src="photos/photo3.jpg" alt="Photo 3">
+                    <p class="caption">Chúc bé gấu sẽ đậu vô NV1 với nhiều trải nghiệm mới trên con đường mình đã chọn. Đừng quên tớ là được hehehe</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Chụt chụt nè hihi')">
+                    <img src="photos/photo4.jpg" alt="Photo 4">
+                    <p class="caption">Chụt chụt nè hihi</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Cậu có thể trở thành bạn gái của tớ có được không....')">
+                    <img src="photos/photo5.jpg" alt="Photo 5">
+                    <p class="caption">Cậu có thể trở thành bạn gái của tớ có được không....</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Cảm ơn cậu vì đã cùng tớ trải qua kì sinh nhật thật đáng nhớ')">
+                    <img src="photos/photo6.jpg" alt="Photo 6">
+                    <p class="caption">Cảm ơn cậu vì đã cùng tớ trải qua kì sinh nhật thật đáng nhớ</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Happy for our first date yeeeeee')">
+                    <img src="photos/photo7.jpg" alt="Photo 7">
+                    <p class="caption">Happy for our first date yeeeeee</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Chúng tôi sau khi xem xong phim tết năm 2024 hehehehe')">
+                    <img src="photos/photo8.jpg" alt="Photo 8">
+                    <p class="caption">Chúng tôi sau khi xem xong phim tết năm 2024 hehehehe</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Cô gái nào xinh qua trời vậy ta. Đó chính là người yêu của tôi ó !!')">
+                    <img src="photos/photo9.jpg" alt="Photo 9">
+                    <p class="caption">Cô gái nào xinh qua trời vậy ta. Đó chính là người yêu của tôi ó !!</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Thích em từ kiếp nào!! sang kiếp này được làm bồ của em')">
+                    <img src="photos/photo10.jpg" alt="Photo 10">
+                    <p class="caption">Thích em từ kiếp nào!! sang kiếp này được làm bồ của em</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Áo đỏ em mặc, như hoa đào nở, Tỏa sáng trong nắng, đẹp tựa giấc mơ')">
+                    <img src="photos/photo11.jpg" alt="Photo 11">
+                    <p class="caption">Áo đỏ em mặc, như hoa đào nở, Tỏa sáng trong nắng, đẹp tựa giấc mơ</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Trong trang phục cổ Việt, tình yêu chúng ta như một bức tranh sống động, rực rỡ với từng pixel ảnh')">
+                    <img src="photos/photo12.jpg" alt="Photo 12">
+                    <p class="caption">Trong trang phục cổ Việt, tình yêu chúng ta như một bức tranh sống động, rực rỡ với từng pixel ảnh</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Anh yêu em....(ngại ngại)')">
+                    <img src="photos/photo13.jpg" alt="Photo 13">
+                    <p class="caption">Anh yêu em....(ngại ngại)</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Cùng em đi muôn nơi, đi tới đâu mình quẩy tới đó yè ye')">
+                    <img src="photos/photo14.jpg" alt="Photo 14">
+                    <p class="caption">Cùng em đi muôn nơi, đi tới đâu mình quẩy tới đó yè ye</p>
+                </div>
+                <div class="image-card" onclick="openModal(this, 'Nhìn tớ xấu quá aaaaa')">
+                    <img src="photos/photo15.jpg" alt="Photo 15">
+                    <p class="caption">Nhìn tớ xấu quá aaaaa</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <p id="modal-caption" class="modal-caption"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

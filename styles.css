@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 192, 203, 0.5); /* Light pink overlay */
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart-confetti, .bubbles, .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart-confetti {
+    z-index: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+}
+
+.image-card {
+    margin: 10px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .image-card {
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) {
+    .image-card {
+        width: 30%;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    transform: scale(0.5);
+    animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Modal Caption Styles */
+.modal-caption {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInCaption 0.5s ease forwards;
+}
+
+@keyframes fadeInCaption {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Effects */
+@keyframes starDrop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation: starDrop 5s infinite;
+}
+
+.star:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.star:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.flying-heart {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 3; /* Ensure heart image is above all effects */
+}
+
+.flying-heart img {
+    width: 100%;
+    height: auto;
+    animation: flyUp 10s linear infinite;
+}
+
+@keyframes flyUp {
+    0% {
+        transform: translateY(100%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.7), 0 0 20px rgba(255, 192, 203, 0.7);
+}
